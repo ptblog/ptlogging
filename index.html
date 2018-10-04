@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PT-logboek</title>
+    <script src="myScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<!-- houdt rekening met mobile > tablet > desktop -->
+<body>
+        <?php
+        echo "My first PHP script!";
+        ?>
+    <div class="group">
+        <div class="col-12 image__text--container">
+                <img class="image image__height--800 image__width--1200" src="1200x800_spoor.jpg" alt="spoor">
+                <div class="image__text--centered">
+                    <p>PT-Groep</p>
+                    <p>logging</p>
+                </div>
+        </div>
+    </div>
+    <div class="group">   
+            <div class="col-2">
+                <p class="col-6">Tekst 1</p>
+                <p class="col-6 hidden__mobile">Tekst 2</p><!--hidden element, om te oefenen-->
+            </div>
+            <div class="col-8">
+                <div class="col-12">
+                    <form action="/action_page.php" target="_blank" method="post" autocomplete="off"> <!--Input formulier-->
+                        <fieldset>
+                            <Legend>Mooie tekst tussen de lijnen</Legend>
+                            <p>Vul hier de datum van het incident in</p>
+                            <input type="date" name="datumzelfinvullen">
+                            <p>Vul hier je bankrekeningnummer in</p>
+                            <input name="Input__veld" type="text"> <!--Tekst invulveld standaart 20 lang-->
+                            <br>
+                            <p>Vink dit aan als Spam wilt ontvangen</p>
+                            <input name="vinkie" type="radio" value="1" checked> vinkie nummer 1 <!--keuze bullets-->
+                            <br>
+                            <input name="vinkie" type="radio" value="2"> vinkie nummer 2
+                            <p>Checkbox om alles te kunnen bevestigen, doe het maar gewoon</p>
+                            <input type="checkbox" name="check1" value="opgelost">Het probleem is opgelost
+                            <br>
+                            <input type="checkbox" name="check2" value="onopgelost">Het probleem is nog aanwezig
+                            <p>zoeken jonge</p>
+                            <input type="search" name="googlesearch">
+                            <p>Selecteer hieronder het equipment</p>
+                            <select name="equipment" size="3"> <!--Dropdown met keuze mogelijkheden en voorgeselecteerde keuze met 3 mogelijkheden-->
+                                <option value="hoofdrailrem">Hoofdrailrem</option>
+                                <option value="groepsrailrem">Groepsrailrem</option>
+                                <option value="verdeelspoorrailrem" selected>Verdeelspoorrailrem</option> <!--Deze is alvast geselecteerd-->
+                                <option value="wissel">Wissel</option>
+                            </select>
+                            <p>Hieronder kan een grotere tekst worden ingevuld, opmaak is onbekend</p>
+                            <textarea name="input__veld--textarea" rows="6" cols="80">Vul hier je tekst in, dank u, in het vervolg even opmaken met css</textarea>
+                            <p>Je kan ook bestanden toevoegen</p>
+                            <input type="file" name="myFile">
+                            <p>Bevestig hier de verkoop van je privacy</p>
+                            <input type="submit" value="Submit" onclick="alert('Ik wil alleen weten of ik nu ook een tekst krijg te zien')">
+                            <p>Ik moet het verschil nog leren tussen een button en een submit knop, ik denk persoonlijk dat de submit het
+                                formulier bevestigd, en voor een button is dat ongedefigneerd.
+                            </p>
+                            <button onclick="alert('Waarom, klik je hierop?')">Nutteloos</button>
+                            <br>
+                            </fieldset>
+                    </form>
+                </div>
+                <p class="col-12">Tekst 1</p>
+                <p class="col-12">Tekst 2</p>
+            </div>
+            <div class="col-2">
+                    <p class="col-6">Tekst 1</p>
+                    <p class="col-6">Tekst 2</p>
+            </div>
+    </div>
+    <div class="group">
+        <p class="col-12">Deze div is bedoeld als footer</p>
+    </div>
+</body>
+</html>

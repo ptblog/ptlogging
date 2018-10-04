@@ -1,0 +1,130 @@
+/*Box-sizing*/
+* {
+    box-sizing: border-box;
+}
+
+/*Responsive Web Design t.b.v. telefoon*/
+    [class*="col-"] {
+        width: 100%;
+    }
+/*Responsive Web Design Grid view 12 columns voor tablets*/
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    }
+/*Responsive Web Design Grid view 12 columns voor desktop*/
+@media only screen and (min-width: 768px) {
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+/* verandert de css als de telefoon op landscape staat en niet wijder is 600px */
+@media only screen and (orientation: landscape) and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/*attribute selector*/
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+/* Om de flow van de pagina te verhinderen of zo iets?*/
+.group::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* opmaak van pagina*/
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+/*.temp {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;*/
+
+.image { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image__height--800 {
+    max-height: 800px;
+}
+.image__width--1200 {
+    max-width: 1200px;
+}
+.image__text--container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.image__text--centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu__ul ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu__li li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu__li--hover li:hover {
+    background-color: #0099cc;
+}
+.hidden {
+    display: none;
+
+/* als het scherm 600px of minder is, verberg het element */
+@media only screen and (max-width: 600px) {
+    .hidden__mobile {
+      display: none;
+    }
+  }
+ /* Extra small devices (phones, 600px and down) */
+ /* @media only screen and (max-width: 600px) {...}*/
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ /*@media only screen and (min-width: 600px) {...}*/
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ /*@media only screen and (min-width: 768px) {...}*/
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...}*/
